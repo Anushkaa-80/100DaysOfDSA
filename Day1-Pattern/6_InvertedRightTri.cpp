@@ -16,9 +16,9 @@ int main()
     int r,c;
     cout<<"Enter row and column";
     cin>>r>>c;
-    for(int i=r;i>0;i--)
+    for(int i=0;i<r;i++)
     {
-        for(int j=r;j>0;j--)
+        for(int j=0;j<c-i;j++)
         {
             cout<<"*";
         }
