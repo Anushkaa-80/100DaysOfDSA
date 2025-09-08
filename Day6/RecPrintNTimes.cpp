@@ -3,16 +3,16 @@ using namespace std;
 
 void print(int n)
 {
-    if(n==5)
+    if(n<=0)
       return;
-    n++;
+          
+    print(n-1);
     cout<<n;
-    print(n);
 }
 
 
 int main()
 {
- int n=0;
+ int n=5;
  print(n);
 }
