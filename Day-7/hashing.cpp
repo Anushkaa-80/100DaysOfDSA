@@ -20,14 +20,13 @@ int main()
         mpp[arr[i]]++;
     }
     int q;
-    cout<<"Enter key num";
+    cout<<"Enter the numbers to find the frequency of";
     cin>>q;
-    cout<<"Output";
     while(q--)
     {
         int number;
         cin>>number;
-        cout<<mpp[number]<<endl;
+        cout<<number<<"->"<<mpp[number]<<endl;
     }
     return 0;
 }
