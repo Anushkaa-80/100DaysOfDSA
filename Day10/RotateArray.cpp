@@ -2,7 +2,7 @@
 #include<vector>
 using namespace std ;
 
-vector<int>& rotateBy1(vector<int> &arr, int n)
+vector<int>& LeftRotateBy1(vector<int> &arr, int n)
 {
    int temp=arr[0];
    for(int i=1;i<n;i++)
@@ -14,7 +14,7 @@ vector<int>& rotateBy1(vector<int> &arr, int n)
    return arr;
 } 
 
-vector<int> & rotateByD(vector<int> &arr, int n, int d)
+vector<int> & LeftRotateByD(vector<int> &arr, int n, int d)
 {
     vector<int> temp;
 
@@ -40,7 +40,7 @@ int main()
 {
     // cout << "\n--- Option 2: Return reference ---" << endl;
     vector<int> arr2 = {1, 2, 3, 4, 5};
-    vector<int>& result2 = rotateByD(arr2, arr2.size(),7);
+    vector<int>& result2 = LeftRotateByD(arr2, arr2.size(),7);
     cout << "Returned array: ";
     for(int x : result2) cout << x << " ";
     cout << "\nOriginal modified: ";
