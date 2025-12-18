@@ -18,14 +18,22 @@ void leftRotateOptimal(int arr[], int n, int d) {
     rev(arr, 0, n-1);     // Step 3: reverse whole array
 }
 
+void rightRotateOptimal(int arr[], int n, int d)
+{
+     d=d%n;
+     rev(arr, 0, n-1);
+     rev(arr, d, n-1);
+    
+}
+
 int main() {
     int arr[] = {1, 2, 3, 4, 5, 6, 7};
-    int n = 7, d = 8;
+    int n = 7, d = 6;
 
-    leftRotateOptimal(arr, n, d);
+    rightRotateOptimal(arr, n, d);
 
     for (int i = 0; i < n; i++) {
         cout << arr[i] << " ";
     }
 }
-//TODO: implement right rotation
+//TODO: implement right rotation: Done:
