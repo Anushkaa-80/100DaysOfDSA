@@ -12,7 +12,7 @@ vector<int> bruteUnion(vector<int> a, vector<int> b)
     int n1=a.size();
     int n2=b.size();
     set<int> st;
-   vector<int> temp;
+    vector<int> temp;
     for(int i=0;i<n1;i++)
     {
         st.insert(a[i]);
@@ -40,7 +40,7 @@ vector<int> optimal(vector<int> a, vector<int>b)
     {
         if(a[i]<=b[j])
         {
-            if(unionArr.size()==0 || unionArr.back()!=0)
+if(unionArr.size()==0 || unionArr.back()!=a[i])
             {
                 unionArr.push_back(a[i]);
             }

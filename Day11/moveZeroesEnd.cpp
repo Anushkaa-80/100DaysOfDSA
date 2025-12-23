@@ -4,7 +4,7 @@ using namespace std;
 
 vector<int> brute(vector<int> arr, int n)
 {
-    vector<int > temp;
+    vector<int> temp;
     // int n=arr.size();
     // //s1: store non-zero to temp
     // int j=0;
