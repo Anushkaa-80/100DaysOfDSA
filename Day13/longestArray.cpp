@@ -3,7 +3,7 @@
 #include<vector>
 
 using namespace std;
-
+//work with all +ve,-ve and zeroes
 int longestSubarrayWithSumK(vector<int> a, long long k )
 {
     map<long long, int> preSumMap;
@@ -30,9 +30,32 @@ int longestSubarrayWithSumK(vector<int> a, long long k )
     return maxLen;
 
 }
+//positives and zeroes
+int longestSubarrayOptimal(vector<int> a, long long k)
+{
+    long long left=0, right=0;
+    long long sum=0,maxLen=0;
+    int n=a.size();
+    while(right<n)
+    {
+        while(left<=right && sum >k)
+        {
+            sum-=a[left];
+            left++;
+        }
+        if(sum==k)
+        {
+            maxLen=max(maxLen,(right-left+1));
+            
+        }
+        right++;
+        if(right<n) sum+=a[right];
+    }
+    return maxLen;
+}
 int main()
 {
     vector<int> arr ={1,2,3,1,1,1,1,4,2,3};
-    int l = longestSubarrayWithSumK(arr,7);
+    int l = longestSubarrayOptimal(arr,7);
     cout<<"Longest subarray with given sum "<<l;
 }
